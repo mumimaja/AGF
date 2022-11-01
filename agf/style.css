@@ -1,0 +1,188 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    color: white;
+    font-family:rockwell;
+}
+
+main{
+    margin: 2%;
+}
+/* HEADER */ 
+header{
+    position:fixed;
+    top:0px;
+    width:100%;
+    height:100px;
+    
+    display:flex; /* For at kunne distribuere boksene inden i.*/
+    justify-content:space-around;
+    align-items:center;
+
+    background-color:darkslategrey;
+    border-bottom:1px solid rgba(255,255,255,0.5); /* Den lille linje i bunden. */
+}
+/* Billeder skal fylde 100*% i deres container: 
+Logo og burger */
+#logo > img{
+    width:100%;
+}
+
+#navMobile > a > img{
+    width:100%; 
+}
+
+
+
+#førsteboks{
+    background-image: url(img/børn.jpg);
+    
+    width: 100%;
+    height: 600px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.kort{
+    display: flex;
+}
+
+.kort div{
+    width: 33%;
+    height: 400px;
+    margin: 10px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius:25px;
+}
+
+.kort div:first-child{
+    width: 50%;
+}
+
+#ko1a{
+    background-image: url(img/1a.jpg);
+}
+
+#ko2a{
+    background-image: url(img/2a.jpg);
+}
+
+#ko3a{
+    background-image: url(img/3a.jpg);
+}
+
+#ko1b{
+    background-image: url(img/1b.jpg);
+    
+}
+
+#ko2b{
+    background-image: url(img/2b.jpg);
+    
+}
+
+#ko3b{
+    background-image: url(img/3b.jpg);
+}
+
+
+h2{
+    color: black;
+}
+
+main h3{
+    padding-left:4%;
+    padding-top:4%;
+}
+
+main h4{
+    padding-left:4%;
+    padding-top:4%;
+}
+
+
+
+
+
+
+	/*lille skærm*/
+	@media screen and (max-width: 768px) {
+	    .kort{
+	        flex-direction: column;
+	        align-items: center;
+	        gap: 10px;
+	    }
+	    .kort div{
+	        width: 95%;
+	    }
+	    .kort > div:first-child{
+	        width: 95%;
+	    }
+        header{
+            justify-content:space-between ;
+            padding-left:10px;
+            padding-right:10px;
+        }
+        
+        /* Skjul laptopmenuen. */
+        #navLaptop {
+            display:none; 
+        }
+    
+        /* Burgermenuen skal have en bredde */
+        #navMobile{ 
+            width:50px;
+        }
+    
+        #logo{ /* Logoet skal være mindre på mobil. */
+            width:80px;
+        }    
+}
+
+/* LAPTOP: */
+@media screen and (min-width: 768px){
+    /* HEADER: LOGO*/
+    #logo {/* Logoet. Er i en div fordi det spiller bedre med flexbox. */
+        width:200px;
+        margin:30px;
+        position:relative;
+        top:70px;
+    }
+
+    /* Skjul mobilmenuen.*/
+    #navMobile{
+        display:none;
+    }
+
+    /* Vis laptopmenuen og samtidig gør den til flex container. */
+    #navLaptop {
+        display:flex; 
+        justify-content:space-around;
+        width:70%;
+        gap:10px;
+    }
+ /* Tekstlinks: */
+ nav > a{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-transform:uppercase;
+    color:white;
+    text-decoration:none;
+    font-size:15pt;
+    font-weight:bold;
+}
+}
+
+
+
+
+
+
+
